@@ -1,14 +1,13 @@
 package projectreact.step_definitions;
 
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import net.thucydides.core.annotations.Steps;
-import projectreact.pages.Careers;
-import projectreact.pages.HomePage;
-import projectreact.pages.CareersSA;
+import projectreact.pages.*;
 
-public class MyStepdefs {
+
+public class MyStepDefinitions {
     @Steps
     HomePage homePage;
     Careers careers;
@@ -52,7 +51,7 @@ public class MyStepdefs {
         careersSA.click_apply_online();
     }
 
-    @And(": fills out the form and enters (.*) and (.*)")
+    @And(": fills out the form and enters {string} and {string}")
     public void fillsOutTheFormAndEntersNameAndEmail(String name, String email)
     {
         careersSA.fill_in_form(name, email);

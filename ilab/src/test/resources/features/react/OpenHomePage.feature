@@ -1,10 +1,11 @@
 Feature: Apply for Job Opening
 
+  @SanityTest
   Scenario: Launch Browser and Navigate to iLab Homepage
     Given : User launch the iLab website
     Then : User must be on the home page
 
-
+  @SanityTest
   Scenario Outline: Apply for job opening
     Given : User launch the iLab website
     When : User must be on the home page
@@ -12,7 +13,7 @@ Feature: Apply for Job Opening
     And : User clicks on South Africa link
     And : Selects the first opening on the list
     And : clicks apply online
-    And : fills out the form and enters <name> and <email>
+    And : fills out the form and enters "<name>" and "<email>"
     And : clicks send button application
     Then : Error message must be displayed
 

@@ -1,7 +1,5 @@
 package projectreact;
 
-
-
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.Step;
 
